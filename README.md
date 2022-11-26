@@ -14,9 +14,11 @@ Para facilitar a codificação do projeto foi usado um protótipo do figma como 
 
 ## 🚀 Tecnologias
 
-- [Item 1](http://localhost:3000/)
-- [Item 2](http://localhost:3000/)
-- [Item 3](http://localhost:3000/)
+- [Vue JS](https://vuejs.org/)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [SASS](https://sass-lang.com/)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 
 ## 📝 Requisitos do desafio
 
