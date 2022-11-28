@@ -8,6 +8,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+  $cor: lightblue;
+
+  h1{
+    color: $cor;
+  }
 
 </style>
