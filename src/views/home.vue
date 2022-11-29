@@ -7,17 +7,22 @@
       <navigation />
     </nav>
     <div class="divider"></div>
+
+    <gameSelectionVue />
   </header>
+  <div class="second-divider"></div>
 </template>
 
 <script>
 
-import navigation from '../components/header/navigation.vue'
+import navigation from '../components/header/navigation-bar/navigation.vue'
+import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue';
 export default {
   name: 'Home',
   components: {
-    navigation
-  }
+    navigation,
+    gameSelectionVue
+  },
 }
 </script>
 <style lang="scss" scoped>
@@ -50,6 +55,24 @@ nav {
     height: 3px;
     background-color: #00AEFF;
     left: 1.5rem;
+    bottom: 0px;
+  }
+}
+
+.second-divider {
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  height: 5px;
+  position: relative;
+  background-color: black;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 202px;
+    height: 3px;
+    background-color: #00AEFF;
+    left: -1rem;
     bottom: 0px;
   }
 }
