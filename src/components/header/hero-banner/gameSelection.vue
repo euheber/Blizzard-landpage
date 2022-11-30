@@ -5,27 +5,14 @@
 
     <button>Jogue agora</button>
   </div>
-
-  <ul>
-    <li v-for="icon in Icons" :key="icon.indexOf">
-      <img :src="icon" alt="Game Icon">
-    </li>
-  </ul>
-
+  <selectGameIconVue />
 </template>
 
 <script>
+import selectGameIconVue from './selectGameIcon.vue';
 export default {
   name: 'GameSelection',
-  data: () => ({
-    Icons: [
-      'src/assets/icons-banner-herro/game-1.png',
-      'src/assets/icons-banner-herro/game-2.png',
-      'src/assets/icons-banner-herro/game-3.png',
-      'src/assets/icons-banner-herro/game-4.png',
-      'src/assets/icons-banner-herro/game-5.png'
-    ]
-  })
+  components:{selectGameIconVue,}
 }
 </script>
 
@@ -75,28 +62,14 @@ $button-bg: #00AEFF;
 }
 
 ul {
-  display: flex;
-  gap: 1rem;
-  margin: 48px 49px 68px 22px;
+    display: flex;
+    gap: 1rem;
+    margin: 48px 49px 68px 22px;
 
-  img {
-    width: 48px;
-    height: 48px;
-  }
+    img {
+        width: 48px;
+        height: 48px;
+    }
 }
 
-li{
-  transition: .5s ease;
-}
-
-li+li {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-
-  &:hover {
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-
-  }
-}
 </style>
