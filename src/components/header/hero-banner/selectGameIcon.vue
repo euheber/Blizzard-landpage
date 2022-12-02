@@ -1,12 +1,17 @@
 <template>
     <ul>
         <li v-for="infos in info" :key="infos.id">
-            <img :src="infos.icon" :alt="infos.alt" class="greyFilterIcon" @click="changeGameOnDisplay($event)">
+            <button @click="this.highlightBtn = infos.highlight" :class="[infos.highlight === this.highlightBtn ? infos.highlight : '']">
+                <img :src="infos.icon" :alt="infos.alt">
+            </button>
         </li>
     </ul>
+
 </template>
 
 <script>
+
+
 export default {
     name: 'Icons',
     data: () => ({
@@ -21,7 +26,8 @@ export default {
                 bg: '../assets/bg-banners/bg-banner-diablo.jpg',
                 logo: '',
                 gif: '',
-                cta: 'Jogue agora'
+                cta: 'Jogue agora',
+                highlight: 'diabloIV'
             },
             {
                 id: 1,
@@ -33,7 +39,8 @@ export default {
                 bg: '../assets/bg-banners/bg-banner-hearthstone.jpg',
                 logo: '',
                 gif: '',
-                cta: 'Reserve agora na pré-venda'
+                cta: 'Reserve agora na pré-venda',
+                highlight: 'HS'
             },
             {
                 id: 3,
@@ -45,7 +52,8 @@ export default {
                 bg: '../assets/bg-banners/bg-banner-warcraft.jpg',
                 logo: '',
                 gif: '',
-                cta: 'Reserve agora na pré-venda'
+                cta: 'Reserve agora na pré-venda',
+                highlight: 'wow'
             },
             {
                 id: 4,
@@ -57,7 +65,8 @@ export default {
                 bg: '',
                 logo: '',
                 gif: '',
-                cta: ''
+                cta: '',
+                highlight: 'diabloHD'
             },
             {
                 id: 5,
@@ -69,41 +78,37 @@ export default {
                 bg: '',
                 logo: '',
                 gif: '',
-                cta: ''
+                cta: '',
+                highlight: 'starcraft'
             },
-        ]
+        ],
+        highlightBtn: 'diabloIV'
     }),
-   methods:{
-    changeGameOnDisplay(e){
-       
-    }
-   }
+    methods: {
+    
+    },
 }
 </script>
 
 
 <style lang="scss" scoped>
-.greyFilterIcon {
-    transition: .5s ease;
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
+ul {
+    display: flex;
 
-    &.active {
-        filter: grayscale(0);
-        -webkit-filter: grayscale(0);
+    & li button {
+        transition: .2s ease;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        background-color: transparent;
     }
 }
 
-
-
-// li+li {
-//     filter: grayscale(100%);
-//     -webkit-filter: grayscale(100%);
-
-//     &:hover {
-//         filter: grayscale(0);
-//         -webkit-filter: grayscale(0);
-//     }
-
-// }
+.diabloIV,
+.HS,
+.diabloHD,
+.wow,
+.starcraft {
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+}
 </style>

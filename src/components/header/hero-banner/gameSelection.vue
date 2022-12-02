@@ -52,7 +52,6 @@ $button-bg: #00AEFF;
   ;
 
   button {
-    width: 10.5rem;
     height: 3.25rem;
     background-color: $button-bg;
     border-radius: 4px;
