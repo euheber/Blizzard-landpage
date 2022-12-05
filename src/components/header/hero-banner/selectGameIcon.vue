@@ -1,23 +1,20 @@
 <template>
     <ul>
         <li v-for="infos in info" :key="infos.id">
-            <button @click="this.highlightBtn = infos.highlight" :class="[infos.highlight === this.highlightBtn ? infos.highlight : '']">
+            <button @click="handleSelectedGame(infos)" :class="[infos.highlight === this.highlightBtn ? infos.highlight : '']">
                 <img :src="infos.icon" :alt="infos.alt">
             </button>
         </li>
     </ul>
-
 </template>
 
 <script>
-
-
 export default {
     name: 'Icons',
     data: () => ({
         info: [
             {
-                id: 0,
+                id: 1,
                 game: 'Diablo IV',
                 icon: 'src/assets/icons-banner-herro/game-1.png',
                 title: 'Retorne à escuridão com o game Diablo IV',
@@ -30,7 +27,7 @@ export default {
                 highlight: 'diabloIV'
             },
             {
-                id: 1,
+                id: 2,
                 game: 'Hearthstone',
                 icon: 'src/assets/icons-banner-herro/game-2.png',
                 title: 'Novo pacote de expansão de Hearthstone',
@@ -85,7 +82,9 @@ export default {
         highlightBtn: 'diabloIV'
     }),
     methods: {
-    
+        handleSelectedGame({highlight, title, description, bg}){
+            this.highlightBtn = highlight
+        }
     },
 }
 </script>
