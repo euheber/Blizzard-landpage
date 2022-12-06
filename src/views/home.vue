@@ -1,13 +1,19 @@
 <template>
   <header>
+    <img src="src/assets/bg-banners/bg-banner-diablo.jpg" alt="" :class="[gameBgPosition == 'diabloIV' ? gameBgPosition : 'default']">
+    <img src="src/assets/bg-banners/bg-banner-hearthstone.jpg" alt="" :class="[gameBgPosition == 'HS' ? gameBgPosition : 'default']">
+    <img src="src/assets/bg-banners/bg-banner-warcraft.jpg" alt="" :class="[gameBgPosition == 'wow' ? gameBgPosition : 'default']">
     <nav>
       <a href="" target="_blank">
         <img src="../assets/logo-blizzard.png" alt="Blizzard">
       </a>
       <navigation />
-    </nav> 
+    </nav>
     <div class="divider"></div>
+   
     <gameSelectionVue @getBg="handleBgStyle"/>
+  
+   
   </header>
   <div class="second-divider"></div>
 </template>
@@ -23,23 +29,51 @@ export default {
     gameSelectionVue
   },
   data: () => ({
-      gameBg: '../assets/bg-banners/bg-banner-diablo.jpg',
+    gameBgPosition: 'diabloIV'
   }),
-  methods:{
-    handleBgStyle(background){
-      this.gameBg = background
+  methods: {
+    handleBgStyle(style) {
+      this.gameBgPosition = style.highlight
     }
   }
 }
 </script>
 <style lang="scss" scoped>
 header {
-  min-height: 625px;
+  min-height: 550px;
   width: 100%;
-  background-image: url('../assets/bg-banners/bg-banner-diablo.jpg');
-  background-position: center right -550px;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.diabloIV{
+  position: absolute;
+  min-height: 625px;
+  right: -650px;
+  z-index: -1;
+}
+
+.HS{
+  position: absolute;
+  min-height: 625px;
+  right: -300px;
+  z-index: -1;
+}
+
+.wow{
+  position: absolute;
+  min-height: 625px;
+  right: -250px;
+  z-index: -1;
+}
+
+.default{
+  position: absolute;
+  opacity: 0;
+  min-height: 625px;
+  right: -250px;
 }
 
 nav {
@@ -47,7 +81,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .divider {

@@ -3,8 +3,8 @@
     <h1>{{title}}</h1>
     <p>{{description}}</p>
     <button>{{cta}}</button>
+    <selectGameIconVue @getData = "gotData" />
   </div>
-  <selectGameIconVue @getData = "gotData" />
 </template>
 
 <script>
@@ -13,18 +13,18 @@ export default {
   name: 'GameSelection',
   components:{selectGameIconVue},
   data: () => ({
-      title: '',
-      description: '',
-      cta: '',
+      title: 'Retorne à escuridão com o game Diablo IV',
+      description: 'O retorno de Lilith traz uma era de escuridão e sofrimento',
+      cta: 'Jogue agora',
   }),
   methods:{
-    gotData({title, bg, descripition, cta}){
+    gotData({title, bg, descripition, cta, highlight}){
         this.title = title
         this.background = bg
         this.description = descripition
         this.cta = cta
         
-        this.$emit('getBg', bg)
+        this.$emit('getBg', {bg, highlight})
     }
   }
 }
@@ -77,7 +77,7 @@ $button-bg: #00AEFF;
 ul {
     display: flex;
     gap: 1rem;
-    margin: 48px 49px 68px 22px;
+    margin: 48px 49px 0px 0px;
 
     img {
         width: 48px;

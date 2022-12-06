@@ -1,11 +1,14 @@
 <template>
+
     <ul>
         <li v-for="infos in info" :key="infos.id">
-            <button @click="handleSelectedGame(infos)" :class="[infos.highlight === this.highlightBtn ? infos.highlight : '']">
+            <button @click="handleSelectedGame(infos)"
+                :class="[infos.highlight === this.highlightBtn ? infos.highlight : '']">
                 <img :src="infos.icon" :alt="infos.alt">
             </button>
         </li>
     </ul>
+
 </template>
 
 <script>
@@ -20,7 +23,7 @@ export default {
                 title: 'Retorne à escuridão com o game Diablo IV',
                 description: 'O retorno de Lilith traz uma era de escuridão e sofrimento',
                 alt: 'Diablo IV',
-                bg: '../assets/bg-banners/bg-banner-diablo.jpg',
+                bg: 'src/assets/bg-banners/bg-banner-diablo.jpg',
                 logo: '',
                 gif: '',
                 cta: 'Jogue agora',
@@ -33,7 +36,7 @@ export default {
                 title: 'Novo pacote de expansão de Hearthstone',
                 description: 'A Horda e a Aliança se encontraram no Vale Alterac para lutar',
                 alt: 'Hearhstone',
-                bg: '../assets/bg-banners/bg-banner-hearthstone.jpg',
+                bg: 'src/assets/bg-banners/bg-banner-hearthstone.jpg',
                 logo: '',
                 gif: '',
                 cta: 'Reserve agora na pré-venda',
@@ -46,7 +49,7 @@ export default {
                 title: 'Desbrave as Terras Sombrias em Shadowlands! ',
                 description: 'O que jaz além do mundo que você conhece?',
                 alt: 'Warcraft',
-                bg: '../assets/bg-banners/bg-banner-warcraft.jpg',
+                bg: 'src/assets/bg-banners/bg-banner-warcraft.jpg',
                 logo: '',
                 gif: '',
                 cta: 'Reserve agora na pré-venda',
@@ -82,8 +85,8 @@ export default {
         highlightBtn: 'diabloIV'
     }),
     methods: {
-        handleSelectedGame(infos){
-            this.highlightBtn = infos.highlight 
+        handleSelectedGame(infos) {
+            this.highlightBtn = infos.highlight
             this.$emit('getData', infos)
         }
     },
