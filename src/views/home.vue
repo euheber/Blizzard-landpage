@@ -5,10 +5,9 @@
         <img src="../assets/logo-blizzard.png" alt="Blizzard">
       </a>
       <navigation />
-    </nav>
+    </nav> 
     <div class="divider"></div>
-
-    <gameSelectionVue />
+    <gameSelectionVue @getBg="handleBgStyle"/>
   </header>
   <div class="second-divider"></div>
 </template>
@@ -23,6 +22,14 @@ export default {
     navigation,
     gameSelectionVue
   },
+  data: () => ({
+      gameBg: '../assets/bg-banners/bg-banner-diablo.jpg',
+  }),
+  methods:{
+    handleBgStyle(background){
+      this.gameBg = background
+    }
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -40,7 +47,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid red;
+
 }
 
 .divider {

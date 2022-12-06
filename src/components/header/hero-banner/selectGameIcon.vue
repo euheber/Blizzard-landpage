@@ -82,8 +82,9 @@ export default {
         highlightBtn: 'diabloIV'
     }),
     methods: {
-        handleSelectedGame({highlight, title, description, bg}){
-            this.highlightBtn = highlight
+        handleSelectedGame(infos){
+            this.highlightBtn = infos.highlight 
+            this.$emit('getData', infos)
         }
     },
 }

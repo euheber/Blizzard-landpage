@@ -1,18 +1,32 @@
 <template>
   <div class="game-selection">
-    <h1>Retorne à escuridão com o game Diablo IV</h1>
-    <p>O retorno de Lilith traz uma era de escuridão e sofrimento.</p>
-
-    <button>Jogue agora</button>
+    <h1>{{title}}</h1>
+    <p>{{description}}</p>
+    <button>{{cta}}</button>
   </div>
-  <selectGameIconVue />
+  <selectGameIconVue @getData = "gotData" />
 </template>
 
 <script>
 import selectGameIconVue from './selectGameIcon.vue';
 export default {
   name: 'GameSelection',
-  components:{selectGameIconVue,}
+  components:{selectGameIconVue},
+  data: () => ({
+      title: '',
+      description: '',
+      cta: '',
+  }),
+  methods:{
+    gotData({title, bg, descripition, cta}){
+        this.title = title
+        this.background = bg
+        this.description = descripition
+        this.cta = cta
+        
+        this.$emit('getBg', bg)
+    }
+  }
 }
 </script>
 
