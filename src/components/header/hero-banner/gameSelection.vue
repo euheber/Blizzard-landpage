@@ -18,13 +18,13 @@ export default {
       cta: 'Jogue agora',
   }),
   methods:{
-    gotData({title, bg, description, cta, highlight}){
+    gotData({title, bg, description, cta, highlight, divider}){
         this.title = title
         this.background = bg
         this.description = description
         this.cta = cta
         
-        this.$emit('getBg', {bg, highlight})
+        this.$emit('getBg', {bg, highlight, divider})
     }
   }
 }
@@ -35,7 +35,7 @@ $text-color: white;
 $button-bg: #00AEFF;
 
 .game-selection {
-  width: 290px;
+  width: 340px;
   margin: 51px 70px 0px 22px;
 
   h1,
@@ -44,15 +44,11 @@ $button-bg: #00AEFF;
     text-align: left;
   }
 
-  ;
-
   h1 {
     font-size: 40px;
     line-height: 44px;
     margin-bottom: 1rem;
   }
-
-  ;
 
   p {
     margin-bottom: 2rem;
@@ -62,8 +58,6 @@ $button-bg: #00AEFF;
     letter-spacing: -0.005em;
     font-style: normal;
   }
-
-  ;
 
   button {
     height: 3.25rem;
