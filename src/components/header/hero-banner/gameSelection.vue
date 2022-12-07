@@ -18,10 +18,10 @@ export default {
       cta: 'Jogue agora',
   }),
   methods:{
-    gotData({title, bg, descripition, cta, highlight}){
+    gotData({title, bg, description, cta, highlight}){
         this.title = title
         this.background = bg
-        this.description = descripition
+        this.description = description
         this.cta = cta
         
         this.$emit('getBg', {bg, highlight})
@@ -35,7 +35,7 @@ $text-color: white;
 $button-bg: #00AEFF;
 
 .game-selection {
-  width: 283px;
+  width: 290px;
   margin: 51px 70px 0px 22px;
 
   h1,
@@ -77,7 +77,7 @@ $button-bg: #00AEFF;
 ul {
     display: flex;
     gap: 1rem;
-    margin: 48px 49px 0px 0px;
+    margin: 48px 49px 22px 0px;
 
     img {
         width: 48px;

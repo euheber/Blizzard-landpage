@@ -1,8 +1,8 @@
 <template>
   <header>
-    <img src="src/assets/bg-banners/bg-banner-diablo.jpg" alt="" :class="[gameBgPosition == 'diabloIV' ? gameBgPosition : 'default']">
-    <img src="src/assets/bg-banners/bg-banner-hearthstone.jpg" alt="" :class="[gameBgPosition == 'HS' ? gameBgPosition : 'default']">
-    <img src="src/assets/bg-banners/bg-banner-warcraft.jpg" alt="" :class="[gameBgPosition == 'wow' ? gameBgPosition : 'default']">
+    <img src="src/assets/bg-banners/bg-banner-diablo.jpg"  :class="[gameBgPosition == 'diabloIV' ? gameBgPosition : 'default']">
+    <img src="src/assets/bg-banners/bg-banner-hearthstone.jpg"  :class="[gameBgPosition == 'HS' ? gameBgPosition : 'default']">
+    <img src="src/assets/bg-banners/bg-banner-warcraft.jpg"  :class="[gameBgPosition == 'wow' ? gameBgPosition : 'default']">
     <nav>
       <a href="" target="_blank">
         <img src="../assets/logo-blizzard.png" alt="Blizzard">
@@ -50,21 +50,21 @@ header {
 
 .diabloIV{
   position: absolute;
-  min-height: 625px;
+  min-height: 550px;
   right: -650px;
   z-index: -1;
 }
 
 .HS{
   position: absolute;
-  min-height: 625px;
+  min-height: 550px;
   right: -300px;
   z-index: -1;
 }
 
 .wow{
   position: absolute;
-  min-height: 625px;
+  min-height: 550px;
   right: -250px;
   z-index: -1;
 }
@@ -72,7 +72,7 @@ header {
 .default{
   position: absolute;
   opacity: 0;
-  min-height: 625px;
+  min-height: 550px;
   right: -250px;
 }
 

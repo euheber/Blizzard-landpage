@@ -95,16 +95,13 @@ export default {
 
 
 <style lang="scss" scoped>
-ul {
-    display: flex;
 
-    & li button {
+    button {
         transition: .2s ease;
         filter: grayscale(100%);
         -webkit-filter: grayscale(100%);
         background-color: transparent;
     }
-}
 
 .diabloIV,
 .HS,
