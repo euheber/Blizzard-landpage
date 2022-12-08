@@ -6,7 +6,6 @@
         <li>Notícias</li>
         <li>Suporte</li>
     </ul>
-
     <div id="btns">
         <button>Criar conta</button>
         <button>Criar Logar</button>
@@ -16,6 +15,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'navigation',
 }
@@ -33,5 +33,10 @@ export default {
     .menu-list {
         display: none;
     }
+}
+
+.mobileMenu{
+    position: absolute;
+    background-color: white;
 }
 </style>

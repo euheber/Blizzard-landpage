@@ -35,7 +35,7 @@ $text-color: white;
 $button-bg: #00AEFF;
 
 .game-selection {
-  width: 340px;
+  width: 320px;
   margin: 51px 70px 0px 22px;
 
   h1,
@@ -45,7 +45,7 @@ $button-bg: #00AEFF;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 38px;
     line-height: 44px;
     margin-bottom: 1rem;
   }

@@ -16,7 +16,9 @@
       </a>
       <navigation />
     </nav>
-    <div class="divider"></div>
+    <div class="divider">
+      <mobileMenuList/>
+    </div>
 
     <gameSelectionVue @getBg="handleBgStyle" />
 
@@ -28,11 +30,13 @@
 
 import navigation from '../components/header/navigation-bar/navigation.vue'
 import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue';
+import mobileMenuList from '../components/header/navigation-bar/mobileMenuList.vue'
 export default {
   name: 'Home',
   components: {
     navigation,
-    gameSelectionVue
+    gameSelectionVue,
+    mobileMenuList
   },
   data: () => ({
     gameBgPosition: 'diabloIV',
