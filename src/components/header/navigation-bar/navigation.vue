@@ -25,6 +25,7 @@ export default {
 .mobile-btn {
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.7);
+    z-index: 99;
 }
 
 @media screen and (max-width: 375px) {

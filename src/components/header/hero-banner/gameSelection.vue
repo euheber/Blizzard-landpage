@@ -37,7 +37,6 @@ $button-bg: #00AEFF;
 .game-selection {
   width: 320px;
   margin: 51px 70px 0px 22px;
-
   h1,
   p {
     color: $text-color;
@@ -78,5 +77,7 @@ ul {
         height: 48px;
     }
 }
+
+
 
 </style>

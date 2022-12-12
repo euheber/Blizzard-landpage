@@ -10,6 +10,8 @@
       :class="[gameBgPosition == 'starcraft' ? gameBgPosition : 'default']">
       <img src="src/assets/bg-banners/bg-banner-diablo-immortal.jpg"
       :class="[gameBgPosition == 'diabloHD' ? gameBgPosition : 'default']">
+
+      <mobileMenuList/>
     <nav>
       <a href="" target="_blank">
         <img src="../assets/logo-blizzard.png" alt="Blizzard" id="logo">
@@ -17,7 +19,6 @@
       <navigation />
     </nav>
     <div class="divider">
-      <mobileMenuList/>
     </div>
 
     <gameSelectionVue @getBg="handleBgStyle" />
@@ -51,7 +52,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '@/assets/style/main.scss';
+
 
 header {
   min-height: 550px;
@@ -69,6 +70,10 @@ nav {
   justify-content: space-between;
 }
 
+nav a {
+  z-index: 99;
+}
+
 #logo {
   height: 32px;
   width: 69.41908264160156px;
@@ -79,7 +84,7 @@ nav {
   width: 100%;
   height: 5px;
   position: relative;
-
+  z-index: 99;
   &::after {
     position: absolute;
     content: '';
