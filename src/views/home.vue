@@ -11,12 +11,12 @@
       <img src="src/assets/bg-banners/bg-banner-diablo-immortal.jpg"
       :class="[gameBgPosition == 'diabloHD' ? gameBgPosition : 'default']">
 
-      <mobileMenuList/>
+     
     <nav>
       <a href="" target="_blank">
         <img src="../assets/logo-blizzard.png" alt="Blizzard" id="logo">
       </a>
-      <navigation />
+      <mobileMenuList/>
     </nav>
     <div class="divider">
     </div>
@@ -31,7 +31,7 @@
 
 import navigation from '../components/header/navigation-bar/navigation.vue'
 import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue';
-import mobileMenuList from '../components/header/navigation-bar/mobileMenuList.vue'
+import mobileMenuList from '../components/header/navigation-bar/mobileNavigation.vue'
 export default {
   name: 'Home',
   components: {
@@ -64,10 +64,11 @@ header {
 }
 
 nav {
-  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 nav a {

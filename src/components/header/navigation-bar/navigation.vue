@@ -11,7 +11,7 @@
         <button>Criar Logar</button>
     </div>
 
-    <i class="fa-solid fa-bars mobile-btn"></i>
+
 </template>
 
 <script>
