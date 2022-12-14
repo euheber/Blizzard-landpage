@@ -1,14 +1,14 @@
 <template>
   <header>
-    <img src="src/assets/bg-banners/bg-banner-diablo.jpg"
+    <img src="/src/assets/bg-banners/bg-banner-diablo.jpg"
       :class="[gameBgPosition == 'diabloIV' ? gameBgPosition : 'default']">
-    <img src="src/assets/bg-banners/bg-banner-hearthstone.jpg"
+    <img src="/src/assets/bg-banners/bg-banner-hearthstone.jpg"
       :class="[gameBgPosition == 'HS' ? gameBgPosition : 'default']">
-    <img src="src/assets/bg-banners/bg-banner-warcraft.jpg"
+    <img src="/src/assets/bg-banners/bg-banner-warcraft.jpg"
       :class="[gameBgPosition == 'wow' ? gameBgPosition : 'default']">
-      <img src="src/assets/bg-banners/bg-banner-starcraft.jpg"
+      <img src="/src/assets/bg-banners/bg-banner-starcraft.jpg"
       :class="[gameBgPosition == 'starcraft' ? gameBgPosition : 'default']">
-      <img src="src/assets/bg-banners/bg-banner-diablo-immortal.jpg"
+      <img src="/src/assets/bg-banners/bg-banner-diablo-immortal.jpg"
       :class="[gameBgPosition == 'diabloHD' ? gameBgPosition : 'default']">
 
      
