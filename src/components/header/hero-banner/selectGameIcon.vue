@@ -19,7 +19,7 @@ export default {
             {
                 id: 1,
                 game: 'Diablo IV',
-                icon: 'src/assets/icons-banner-herro/game-1.png',
+                icon: '/src/assets/icons-banner-herro/game-1.png',
                 title: 'Retorne à escuridão com o game Diablo IV',
                 description: 'O retorno de Lilith traz uma era de escuridão e sofrimento',
                 alt: 'Diablo IV',
@@ -33,7 +33,7 @@ export default {
             {
                 id: 2,
                 game: 'Hearthstone',
-                icon: 'src/assets/icons-banner-herro/game-2.png',
+                icon: '/src/assets/icons-banner-herro/game-2.png',
                 title: 'Novo pacote de expansão de Hearthstone',
                 description: 'A Horda e a Aliança se encontraram no Vale Alterac para lutar',
                 alt: 'Hearhstone',
@@ -47,7 +47,7 @@ export default {
             {
                 id: 3,
                 game: 'World of Warcraft',
-                icon: 'src/assets/icons-banner-herro/game-3.png',
+                icon: '/src/assets/icons-banner-herro/game-3.png',
                 title: 'Desbrave as Terras Sombrias em Shadowlands!',
                 description: 'O que jaz além do mundo que você conhece?',
                 alt: 'Warcraft',
@@ -61,7 +61,7 @@ export default {
             {
                 id: 4,
                 game: 'Diablo HD',
-                icon: 'src/assets/icons-banner-herro/game-4.png',
+                icon: '/src/assets/icons-banner-herro/game-4.png',
                 title: 'Matança de demônios em qualquer lugar',
                 description: 'Descubra o que aconteceu entre Diablo II e Diablo III.',
                 alt: '',
@@ -75,7 +75,7 @@ export default {
             {
                 id: 5,
                 game: 'Starcraft II',
-                icon: 'src/assets/icons-banner-herro/game-5.png',
+                icon: '/src/assets/icons-banner-herro/game-5.png',
                 title: 'Jogo de estratégia em tempo real',
                 description: 'Conquintes a galáxia como Terrano, Zerg ou Protoss.',
                 alt: '',
