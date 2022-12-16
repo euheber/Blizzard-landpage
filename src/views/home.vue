@@ -1,20 +1,20 @@
 <template>
   <header>
-    <img src="bg-banners/bg-banner-diablo.jpg"
+    <img src="/bg-banners/bg-banner-diablo.jpg"
       :class="[gameBgPosition == 'diabloIV' ? gameBgPosition : 'default']">
-    <img src="bg-banners/bg-banner-hearthstone.jpg"
+    <img src="/bg-banners/bg-banner-hearthstone.jpg"
       :class="[gameBgPosition == 'HS' ? gameBgPosition : 'default']">
-    <img src="bg-banners/bg-banner-warcraft.jpg"
+    <img src="/bg-banners/bg-banner-warcraft.jpg"
       :class="[gameBgPosition == 'wow' ? gameBgPosition : 'default']">
-      <img src="bg-banners/bg-banner-starcraft.jpg"
+      <img src="/bg-banners/bg-banner-starcraft.jpg"
       :class="[gameBgPosition == 'starcraft' ? gameBgPosition : 'default']">
-      <img src="bg-banners/bg-banner-diablo-immortal.jpg"
+      <img src="/bg-banners/bg-banner-diablo-immortal.jpg"
       :class="[gameBgPosition == 'diabloHD' ? gameBgPosition : 'default']">
 
      
     <nav>
       <a href="" target="_blank">
-        <img src="logo-blizzard.png" alt="Blizzard" id="logo">
+        <img src="/logo-blizzard.png" alt="Blizzard" id="logo">
       </a>
       <mobileMenuList/>
     </nav>

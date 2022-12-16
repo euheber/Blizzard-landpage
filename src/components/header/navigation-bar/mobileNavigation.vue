@@ -3,44 +3,56 @@
         <button id="openMobileMenu" @click="this.handleMobileMenu = !this.handleMobileMenu">
             <i class="fa-solid fa-bars mobile-btn"></i>
         </button>
+ 
         <Transition name="grow">
             <div id="mobileMenu" v-if="handleMobileMenu">
-            <div id="listBox">
-                <button @click="handleGameList" >Jogos<i class="fa-solid fa-chevron-down btnGame"></i></button>
-            <ul v-if="toggleGamesList">
-                <li>Jogos</li>
-            </ul>
+                <div id="listBox">
+                    <button @click="handleGameList">Jogos<i class="fa-solid fa-chevron-down btnGame"></i></button>
+                    <Transition name="games">
+                        <ul v-if="toggleGamesList" class="gamesList">
+                            <li v-for="game in gameIcons" :key="game.indexOf">
+                                <img :src="game">
+                            </li>
+                        </ul>
+                    </Transition>
 
-            <button @click="handleEsportList">Esportes<i class="fa-solid fa-chevron-down btnEsport"></i></button>
-  
-            <ul v-if="toggleEsportList">
-                <li>Esportes</li>
-            </ul>
+                    <button @click="handleEsportList">Esportes<i
+                            class="fa-solid fa-chevron-down btnEsport"></i></button>
+
+                    <ul v-if="toggleEsportList">
+                        <li>Esportes</li>
+                    </ul>
 
 
-            <ul>
-                <li>
-                    <p>Loja</p>
-                </li>
-                <li>
-                    <p>Notícias</p>
+                    <ul>
+                        <li>
+                            <p>Loja</p>
+                        </li>
+                        <li>
+                            <p>Notícias</p>
 
-                </li>
-                <li>
-                    <p>Suporte</p>
-                </li>
-            </ul>
+                        </li>
+                        <li>
+                            <p>Suporte</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="profile-btns">
+                    <button id="create-account">Criar conta</button>
+                    <button id="login"><i class="fa-regular fa-user"></i> Logar</button>
+                </div>
+
+                <div id="mobileMenuFooter">
+                    <img src="/icons-banner-hero/blizzardIcon.svg" alt="">
+                    <img src="/icons-banner-hero/allGames.svg" alt="">
+                    <img src="/icons-banner-hero/comunityIcon.svg" alt="">
+                    <img src="/icons-banner-hero/downloadIcon.svg" alt="">
+                    <img src="/icons-banner-hero/tournamentIcon.svg" alt="">
+                </div>
             </div>
-
-            <div id="mobileMenuFooter">
-                <img src="/icons-banner-hero/blizzardIcon.svg" alt="">
-                <img src="/icons-banner-hero/allGames.svg" alt="">
-                <img src="/icons-banner-hero/comunityIcon.svg" alt="">
-                <img src="/icons-banner-hero/downloadIcon.svg" alt="">
-            </div>
-        </div>
         </Transition>
-       
+
     </div>
 </template>
 
@@ -51,7 +63,21 @@ export default {
     data: () => ({
         toggleGamesList: false,
         toggleEsportList: false,
-        handleMobileMenu: false
+        handleMobileMenu: false,
+        gameIcons: [
+            'icons-banner-hero/game-1.png',
+            'icons-banner-hero/game-2.png',
+            'icons-banner-hero/game-3.png',
+            'icons-banner-hero/game-4.png',
+            'icons-banner-hero/game-5.png',
+            'icons-banner-hero/game-6.png',
+            'icons-banner-hero/game-7.png',
+            'icons-banner-hero/game-8.png',
+            'icons-banner-hero/game-9.png',
+            'icons-banner-hero/game-10.png',
+            'icons-banner-hero/game-11.png',
+            'icons-banner-hero/game-12.png',
+        ]
     }),
     methods: {
         handleGameList() {
@@ -80,12 +106,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-*{
+* {
     text-align: center;
 }
 
-#listBox{
+#listBox {
     margin-top: 2rem;
     margin: 0 auto;
 }
@@ -104,12 +129,13 @@ export default {
     top: 0;
     width: 100%;
     z-index: 98;
-    // min-height: 60vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
     backdrop-filter: blur(6px);
+
     button {
         background-color: transparent;
         color: white;
@@ -126,6 +152,18 @@ export default {
 
 }
 
+.gamesList {
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    li img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
 #mobileMenuFooter {
     align-self: end;
     position: absolute;
@@ -140,46 +178,59 @@ export default {
 }
 
 .btnGame {
-    transition: .3s ease;
+    transition: .2s ease;
+
     &.active {
         transform: rotate(3.142rad);
-        color: #00AEFF;;
+        color: #00AEFF;
+        animation-delay: .5s;
     }
 
 }
 
 .btnEsport {
-    transition: .3s ease;
-
     &.active {
         transform: rotate(3.142rad);
-        color: #00AEFF;;
+        color: #00AEFF;
     }
 }
 
-.grow-enter-from{
-    height: 0;
+
+#profile-btns {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    button{
+        width: 25%;
+        padding: .4rem;
+        border-radius: 3.15px;
+        &#create-account{
+            border: 1px solid white;
+        }
+
+        &#login{
+            background-color: #00AEFF;
+        }
+    }
+   
 }
 
-.grow-enter-active{
-    transition: all 1s ease;
-    min-height: 60vh;
+.grow-enter-active,
+.grow-leave-active,
+.games-enter-active
+{
+    transition: opacity .5s ease;
 }
 
-.grow-enter-to{
-    min-height: 60vh;
+.grow-enter-from,
+.grow-leave-to,
+.games-enter-from,
+.games-leave-to {
+    opacity: 0;
 }
 
-.grow-leave-from{ 
-    min-height: 60vh;
-}
-
-.grow-leave-active{ 
-    transition: all 1s ease;
-    height: 0;
-}
-
-.grow-leave-to{
-    height: 0;
+.games-leave-active{
+    transition: opacity .11s ease;
 }
 </style>
