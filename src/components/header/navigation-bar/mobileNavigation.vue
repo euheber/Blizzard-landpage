@@ -3,12 +3,12 @@
         <button id="openMobileMenu" @click="this.handleMobileMenu = !this.handleMobileMenu">
             <i class="fa-solid fa-bars mobile-btn"></i>
         </button>
- 
-        <Transition name="grow">
+
+        <Transition name="fadeAnimation">
             <div id="mobileMenu" v-if="handleMobileMenu">
                 <div id="listBox">
                     <button @click="handleGameList">Jogos<i class="fa-solid fa-chevron-down btnGame"></i></button>
-                    <Transition name="games">
+                    <Transition name="fadeAnimation">
                         <ul v-if="toggleGamesList" class="gamesList">
                             <li v-for="game in gameIcons" :key="game.indexOf">
                                 <img :src="game">
@@ -16,13 +16,16 @@
                         </ul>
                     </Transition>
 
-                    <button @click="handleEsportList">Esportes<i
+                    <button @click="handleEsportList">E-sports<i
                             class="fa-solid fa-chevron-down btnEsport"></i></button>
 
-                    <ul v-if="toggleEsportList">
-                        <li>Esportes</li>
+                   <Transition name="fadeAnimation">
+                    <ul v-if="toggleEsportList" class="esportsList">
+                        <li v-for="sports in tournamentIcons" :key="sports.indexOf">
+                                <img :src="sports">
+                        </li>
                     </ul>
-
+                   </Transition>
 
                     <ul>
                         <li>
@@ -36,19 +39,19 @@
                             <p>Suporte</p>
                         </li>
                     </ul>
-                </div>
 
-                <div id="profile-btns">
-                    <button id="create-account">Criar conta</button>
-                    <button id="login"><i class="fa-regular fa-user"></i> Logar</button>
-                </div>
+                    <div id="profile-btns">
+                        <button id="create-account">Criar conta</button>
+                        <button id="login"><i class="fa-regular fa-user"></i> Logar</button>
+                    </div>
 
-                <div id="mobileMenuFooter">
-                    <img src="/icons-banner-hero/blizzardIcon.svg" alt="">
-                    <img src="/icons-banner-hero/allGames.svg" alt="">
-                    <img src="/icons-banner-hero/comunityIcon.svg" alt="">
-                    <img src="/icons-banner-hero/downloadIcon.svg" alt="">
-                    <img src="/icons-banner-hero/tournamentIcon.svg" alt="">
+                    <div id="mobileMenuFooter">
+                        <img src="/icons-banner-hero/blizzardIcon.svg" alt="">
+                        <img src="/icons-banner-hero/allGames.svg" alt="">
+                        <img src="/icons-banner-hero/comunityIcon.svg" alt="">
+                        <img src="/icons-banner-hero/downloadIcon.svg" alt="">
+                        <img src="/icons-banner-hero/tournamentIcon.svg" alt="">
+                    </div>
                 </div>
             </div>
         </Transition>
@@ -77,6 +80,12 @@ export default {
             'icons-banner-hero/game-10.png',
             'icons-banner-hero/game-11.png',
             'icons-banner-hero/game-12.png',
+        ],
+        tournamentIcons:[
+            'icons-banner-hero/sport-1.png',
+            'icons-banner-hero/sport-2.png',
+            'icons-banner-hero/sport-3.png',
+            'icons-banner-hero/sport-4.png'
         ]
     }),
     methods: {
@@ -111,8 +120,10 @@ export default {
 }
 
 #listBox {
-    margin-top: 2rem;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    // min-height: 80vh;
 }
 
 #openMobileMenu {
@@ -129,13 +140,11 @@ export default {
     top: 0;
     width: 100%;
     z-index: 98;
-    min-height: 100vh;
+    padding-top: 6rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     background: linear-gradient(180deg, #020203 0%, rgba(14, 17, 23, 0.92) 96.35%, rgba(14, 17, 23, 0.9) 100%);
     backdrop-filter: blur(6px);
-
+    
     button {
         background-color: transparent;
         color: white;
@@ -164,10 +173,19 @@ export default {
     }
 }
 
+.esportsList{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    li img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
 #mobileMenuFooter {
-    align-self: end;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: black;
     text-align: center;
@@ -175,6 +193,8 @@ export default {
     align-items: center;
     justify-content: space-evenly;
     padding: .5rem;
+    margin-top: auto;
+    align-self: flex-end;
 }
 
 .btnGame {
@@ -197,40 +217,41 @@ export default {
 
 
 #profile-btns {
-    margin-top: 2rem;
+    margin-block: 2rem;
     display: flex;
     justify-content: center;
     gap: 1rem;
-    button{
+
+    button {
         width: 25%;
         padding: .4rem;
         border-radius: 3.15px;
-        &#create-account{
+
+        &#create-account {
             border: 1px solid white;
         }
 
-        &#login{
+        &#login {
             background-color: #00AEFF;
         }
     }
-   
+
 }
 
-.grow-enter-active,
-.grow-leave-active,
-.games-enter-active
-{
+.fadeAnimation-enter-active,
+.fadeAnimation-leave-active,
+.fadeAnimation-enter-active {
     transition: opacity .5s ease;
 }
 
-.grow-enter-from,
-.grow-leave-to,
-.games-enter-from,
-.games-leave-to {
+.fadeAnimation-enter-from,
+.fadeAnimation-leave-to,
+.fadeAnimation-enter-from,
+.fadeAnimation-leave-to {
     opacity: 0;
 }
 
-.games-leave-active{
+.fadeAnimation-leave-active {
     transition: opacity .11s ease;
 }
 </style>
