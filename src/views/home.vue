@@ -124,21 +124,21 @@ nav a {
 .wow {
   position: absolute;
   min-height: 550px;
-  right: -250px;
+  right: -355px;
   z-index: -1;
 }
 
 .diabloHD {
   position: absolute;
   min-height: 550px;
-  right: -780px;
+  right: -800px;
   z-index: -1;
 }
 
 .starcraft {
   position: absolute;
   min-height: 550px;
-  right: -670px;
+  right: -950px;
   z-index: -1;
 }
 
