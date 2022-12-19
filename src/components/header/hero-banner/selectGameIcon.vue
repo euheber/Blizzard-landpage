@@ -1,5 +1,6 @@
 <template>
 
+    
     <ul>
         <li v-for="infos in info" :key="infos.id">
             <button @click="handleSelectedGame(infos)"
@@ -8,6 +9,7 @@
             </button>
         </li>
     </ul>
+
 
 </template>
 
@@ -95,6 +97,15 @@ export default {
 
 
 <style lang="scss" scoped>
+
+ul {
+  display: flex;
+  gap: 1rem;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
 
     button {
         transition: .2s ease;

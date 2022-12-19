@@ -23,8 +23,8 @@
 
     <gameSelectionVue @getBg="handleBgStyle" />
 
-    <div class="second-divider" :style='`width:${divider}%`'></div>
   </header>
+  <div class="second-divider" :style='`width:${divider}%`'></div>
 </template>
 
 <script>
@@ -55,7 +55,7 @@ export default {
 
 
 header {
-  min-height: 550px;
+  height: 550px;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
