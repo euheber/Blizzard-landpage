@@ -1,3 +1,5 @@
+@import '../variables/colors';
+
 header {
     height: 550px;
     width: 100%;
@@ -35,7 +37,7 @@ header {
       content: '';
       width: 43px;
       height: 3px;
-      background-color: #00AEFF;
+      background-color: $primary-blue;
       left: 1.5rem;
       bottom: 0px;
     }
