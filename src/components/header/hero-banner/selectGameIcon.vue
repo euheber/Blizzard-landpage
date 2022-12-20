@@ -96,30 +96,5 @@ export default {
 </script>
 
 
-<style lang="scss" scoped>
+<style src="../../../assets/scss/header/selectGameIcon.scss" lang="scss" scoped />
 
-ul {
-  display: flex;
-  gap: 1rem;
-  img {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-    button {
-        transition: .2s ease;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        background-color: transparent;
-    }
-
-.diabloIV,
-.HS,
-.diabloHD,
-.wow,
-.starcraft {
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
-}
-</style>

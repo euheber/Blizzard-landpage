@@ -1,5 +1,5 @@
 @import '../variables/colors';
-
+@import '../variables/buttons';
 
 .game-selection {
     display: flex;
@@ -34,10 +34,7 @@
       font-style: normal;
     }
     button {
-      background-color: $primary-blue;
-      border-radius: 4px;
-      padding: 14px 32px;
-      color: $text-white;
+        @include defaultBtn;
     }
   }
   
