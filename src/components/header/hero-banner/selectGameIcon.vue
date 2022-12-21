@@ -1,6 +1,4 @@
 <template>
-
-    
     <ul>
         <li v-for="infos in info" :key="infos.id">
             <button @click="handleSelectedGame(infos)"
@@ -9,8 +7,6 @@
             </button>
         </li>
     </ul>
-
-
 </template>
 
 <script>

@@ -16,7 +16,7 @@
       <a href="" target="_blank">
         <img src="/logo-blizzard.png" alt="Blizzard" id="logo">
       </a>
-      <mobileMenuList/>
+      <navbar/>
     </nav>
     <div class="divider">
     </div>
@@ -28,16 +28,15 @@
 </template>
 
 <script>
+import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue'
+import navbar from '../components/header/navigation-bar/navbar.vue'
 
-import navigation from '../components/header/navigation-bar/navigation.vue'
-import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue';
-import mobileMenuList from '../components/header/navigation-bar/mobileNavigation.vue'
 export default {
   name: 'Home',
   components: {
     navigation,
     gameSelectionVue,
-    mobileMenuList
+    navbar
   },
   data: () => ({
     gameBgPosition: 'diabloIV',

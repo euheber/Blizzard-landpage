@@ -1,0 +1,79 @@
+@import "../variables/colors";
+@import "../variables/buttons";
+@import "../variables/flex";
+
+#modal {
+  position: absolute;
+  max-width: 500px;
+  border: 1px solid $primary-blue;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 6rem;
+  background: url(ilustrations/modalBg.png) no-repeat center;
+  background-size: cover;
+  z-index: 9999;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+img{
+    margin-bottom: 40px;
+}
+
+form{   
+    width: 80%;
+    margin: 0 auto 41px auto;
+    input{
+        padding: .4rem;
+        width: 100%;
+        margin-bottom: 1rem
+    }
+}
+
+ul{ 
+    @include flexRow;
+    width: 50%;
+    margin: 16px auto 35px auto;
+    justify-content: center;
+
+    li{ 
+        background-color: $text-white;
+        width: 24px;
+        height: 24px;
+        padding: 1rem;
+        border-radius: 4px;
+        @include flexRow;
+        justify-content: center;
+        align-items: center;
+
+        i{
+            font-size: 1.1rem
+        }
+    }
+}
+
+button{
+    @include defaultBtn;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+
+.text-style-white{
+    color: $text-white;
+    font-size: 12px;
+}
+
+.text-style{
+    text-decoration: underline;
+    color: $primary-blue;
+    font-size: 12px;
+    margin-top: 1rem;
+}
+
+.X-icon{
+    position: absolute;
+    right: 1rem;
+    color: $primary-blue;
+}

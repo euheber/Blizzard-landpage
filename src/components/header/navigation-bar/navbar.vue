@@ -1,5 +1,7 @@
 <template>
     <div>
+            <modalLoginVue />
+
         <button id="openMobileMenu" @click="this.handleMobileMenu = !this.handleMobileMenu">
             <i class="fa-solid fa-bars mobile-btn"></i>
         </button>
@@ -60,9 +62,12 @@
 </template>
 
 <script>
-
+import modalLoginVue from '../Modal/modal-login.vue'
 export default {
-    name: 'mobileMenuList',
+    name: 'navbar',
+    components: {
+        modalLoginVue,
+    },
     data: () => ({
         toggleGamesList: false,
         toggleEsportList: false,
