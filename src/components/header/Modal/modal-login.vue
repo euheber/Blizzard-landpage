@@ -1,7 +1,7 @@
 <template>
-    <div id="modal" v-if="handleModal">
+    <div id="modal"  v-if="handleModal">
 
-        <div class="X-icon" @click="this.handleModal = !this.handleModal">
+        <div class="X-icon" @click="handleM">
             <i class="fa-solid fa-x"></i>
         </div>
         <div>
@@ -9,13 +9,13 @@
 
             <form @click.prevent="">
 
-                <input type="text" placeholder="E-mail ou telefone"> <br>
-                <input type="password" placeholder="Senha"><br>
+                <input type="text" placeholder="E-mail ou telefone" autocomplete="username"> <br>
+                <input type="password" placeholder="Senha" autocomplete="current-password"><br>
 
                 <button>Conectar-se</button>
             </form>
 
-            <span class="text-style-white">ou conecte-se com</span>
+                <span class="text-style-white">ou conecte-se com</span>
 
             <ul>
                 <li><i class="fa-brands fa-google"></i></li>
@@ -26,7 +26,7 @@
             <p class="text-style-white">
                <span class="text-style">Crie uma conta</span> Battle.net de graça
             </p>
-
+                {{ greetingMessage }}
             <p class="text-style">Não consegue logar?</p>
         </div>
     </div>
@@ -35,9 +35,17 @@
 <script>
 export default {
     name: "login",
+    props: {
+    greetingMessage: String
+  },
     data: () => ({
         handleModal: true,
     }),
+    methods: { 
+        handleM(){
+            this.handleModal = !this.handleModal
+        }
+    }
 }
 </script>
 

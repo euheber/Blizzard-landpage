@@ -1,7 +1,7 @@
 <template>
     <div>
-            <modalLoginVue />
-
+            <modalLoginVue :greeting-message="hello"/>
+       
         <button id="openMobileMenu" @click="this.handleMobileMenu = !this.handleMobileMenu">
             <i class="fa-solid fa-bars mobile-btn"></i>
         </button>
@@ -72,6 +72,7 @@ export default {
         toggleGamesList: false,
         toggleEsportList: false,
         handleMobileMenu: false,
+        hello: 'teste',
         gameIcons: [
             'icons-banner-hero/game-1.png',
             'icons-banner-hero/game-2.png',
