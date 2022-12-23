@@ -33,7 +33,7 @@
 export default {
     name: "login",
     data: () => ({
-        handleModal: true,
+        handleModal: false,
     }),
     methods: { 
         handleM(){
