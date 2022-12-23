@@ -1,7 +1,6 @@
 <template>
     <div>
-            <modalLoginVue :greeting-message="hello"/>
-       
+            <modalLoginVue ref="meuModalRef"/>
         <button id="openMobileMenu" @click="this.handleMobileMenu = !this.handleMobileMenu">
             <i class="fa-solid fa-bars mobile-btn"></i>
         </button>
@@ -44,7 +43,7 @@
 
                     <div id="profile-btns">
                         <button id="create-account">Criar conta</button>
-                        <button id="login"><i class="fa-regular fa-user"></i> Logar</button>
+                        <button id="login" @click="renderizar"><i class="fa-regular fa-user"></i> Logar</button>
                     </div>
 
                     <div id="mobileMenuFooter">
@@ -72,7 +71,7 @@ export default {
         toggleGamesList: false,
         toggleEsportList: false,
         handleMobileMenu: false,
-        hello: 'teste',
+        handleM: '',
         gameIcons: [
             'icons-banner-hero/game-1.png',
             'icons-banner-hero/game-2.png',
@@ -115,6 +114,9 @@ export default {
             this.toggleEsportList = !this.toggleEsportList
             const btnEsport = document.querySelector('.btnEsport')
             btnEsport.classList.toggle('active')
+        },
+        renderizar(){
+            this.$refs.meuModalRef.handleM()
         }
     }
 }

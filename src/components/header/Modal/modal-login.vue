@@ -1,5 +1,5 @@
 <template>
-    <div id="modal"  v-if="handleModal">
+    <div id="modal" v-if="handleModal">
 
         <div class="X-icon" @click="handleM">
             <i class="fa-solid fa-x"></i>
@@ -14,9 +14,7 @@
 
                 <button>Conectar-se</button>
             </form>
-
                 <span class="text-style-white">ou conecte-se com</span>
-
             <ul>
                 <li><i class="fa-brands fa-google"></i></li>
                 <li><i class="fa-brands fa-apple fa-x4"></i></li>
@@ -26,7 +24,6 @@
             <p class="text-style-white">
                <span class="text-style">Crie uma conta</span> Battle.net de graça
             </p>
-                {{ greetingMessage }}
             <p class="text-style">Não consegue logar?</p>
         </div>
     </div>
@@ -35,16 +32,13 @@
 <script>
 export default {
     name: "login",
-    props: {
-    greetingMessage: String
-  },
     data: () => ({
         handleModal: true,
     }),
     methods: { 
         handleM(){
             this.handleModal = !this.handleModal
-        }
+        },
     }
 }
 </script>
