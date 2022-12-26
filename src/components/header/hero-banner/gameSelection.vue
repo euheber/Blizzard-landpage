@@ -26,8 +26,8 @@ export default {
     title: 'Retorne à escuridão com o game Diablo IV',
     description: 'O retorno de Lilith traz uma era de escuridão e sofrimento',
     cta: 'Jogue agora',
-    logo: '/icons-banner-hero/diabloLogo.svg',
-    gif: '/icons-banner-hero/diabloIV.gif'
+    logo: 'icons-banner-hero/diabloLogo.svg',
+    gif: 'icons-banner-hero/diabloIV.gif'
   }),
   methods: {
     gotData({ title, bg, description, cta, highlight, divider, logo, gif}) {
