@@ -4,6 +4,37 @@
     text-align: center;
 }
 
+
+#navigation{
+    display: flex;
+    gap:  1rem;
+    align-items: center;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
+#medium-screen-btns{
+    display: flex;
+    gap: 1rem;
+    order: 2;
+    z-index: 98;
+    @media(max-width: 375px){
+        display: none;
+    }
+    button {
+        padding: .1rem 1rem;
+        border-radius: 3.15px;
+
+        &#create-account {
+            border: 1px solid $text-white;
+        }
+
+        &#login {
+            background-color: $primary-blue;
+        }
+    }
+}
+
 #listBox {
     width: 100%;
     display: flex;
@@ -120,7 +151,9 @@
             background-color: $primary-blue;
         }
     }
-
+    @media(min-width: 376px){
+        display: none;
+    }
 }
 
 .fadeAnimation-enter-active,

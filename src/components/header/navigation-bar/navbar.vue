@@ -1,6 +1,12 @@
 <template>
-    <div>
+    <div id="navigation">
             <modalLoginVue ref="meuModalRef"/>
+
+        <div id="medium-screen-btns">
+            <button id="create-account">Criar conta</button>
+            <button id="login" @click="renderizar"><i class="fa-regular fa-user"></i> Logar</button>
+        </div>
+
         <button id="openMobileMenu" @click="this.handleMobileMenu = !this.handleMobileMenu">
             <i class="fa-solid fa-bars mobile-btn"></i>
         </button>
@@ -122,5 +128,5 @@ export default {
 }
 </script>
 
-<style src="../../../assets/scss/header/mobileNavigation.scss" lang="scss" scoped />
+<style src="../../../assets/scss/header/navbar.scss" lang="scss" scoped />
 

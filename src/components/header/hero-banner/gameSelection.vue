@@ -1,11 +1,11 @@
 <template>
   <div class="game-selection">
-  <div class="position-relative-container">
-    <div class="position-absolute-container">
-      <h1>{{ title }}</h1>
-      <p>{{ description }}</p>
-      <button>{{ cta }}</button>
-    </div>
+   <div class="position-relative-container">
+       <div class="position-absolute-container">
+            <h1>{{ title }}</h1>
+            <p>{{ description }}</p>
+            <button>{{ cta }}</button>
+       </div>
     <selectGameIconVue @getData="gotData" />
   </div>
 

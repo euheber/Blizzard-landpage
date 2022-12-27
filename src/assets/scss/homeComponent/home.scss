@@ -59,7 +59,7 @@ header {
     right: -650px;
     z-index: -1;
     @media(min-width:768px){ 
-      right: -350px;
+      right: 0;
     }
   }
   
@@ -68,6 +68,9 @@ header {
     min-height: 550px;
     right: -300px;
     z-index: -1;
+    @media(min-width:768px){ 
+      right: 0;
+    }
   }
   
   .wow {
@@ -75,6 +78,10 @@ header {
     min-height: 550px;
     right: -355px;
     z-index: -1;
+    @media(min-width:768px){ 
+      right: 0;
+
+    }
   }
   
   .diabloHD {
@@ -82,6 +89,9 @@ header {
     min-height: 550px;
     right: -800px;
     z-index: -1;
+    @media(min-width:768px){ 
+      right: -200px;
+    }
   }
   
   .starcraft {
@@ -90,7 +100,8 @@ header {
     right: -950px;
     z-index: -1;
     @media(min-width:768px){ 
-      right: -650px;
+      right: 0;
+
     }
   }
   
