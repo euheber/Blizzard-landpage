@@ -4,9 +4,8 @@
 .game-selection {
     display: flex;
     flex-direction: column;
-    max-width: 1360px;
-    justify-content: space-evenly;
-    padding: 1rem;
+    max-width: 1000px;
+    justify-content: space-between;
     @media(min-width: 375px) and (max-width:768px){
         flex-direction: row;
     }

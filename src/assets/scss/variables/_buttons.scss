@@ -5,4 +5,9 @@
     border-radius: 4px;
     padding: 14px 32px;
     color: $text-white;
+    cursor: pointer;
+    transition: .2s ease;
+    &:hover{ 
+        color: $bg-black;
+    }
 }

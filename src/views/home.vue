@@ -17,6 +17,7 @@
         <img src="/logo-blizzard.png" alt="Blizzard" id="logo">
       </a>
       <navbar/>
+      <bigScreenNavbarVue />
     </nav>
     <div class="divider">
     </div>
@@ -30,13 +31,14 @@
 <script>
 import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue'
 import navbar from '../components/header/navigation-bar/navbar.vue'
-
+import bigScreenNavbarVue from '../components/header/navigation-bar/bigScreenNavbar.vue'
 export default {
   name: 'Home',
   components: {
     navigation,
     gameSelectionVue,
-    navbar
+    navbar,
+    bigScreenNavbarVue
   },
   data: () => ({
     gameBgPosition: 'diabloIV',

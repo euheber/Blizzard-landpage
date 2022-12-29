@@ -11,6 +11,9 @@
     align-items: center;
     width: 100%;
     flex-direction: row-reverse;
+    @media(min-width: 1440px){
+        display: none;
+    }
 }
 
 #medium-screen-btns{

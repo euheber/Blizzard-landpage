@@ -128,5 +128,5 @@ export default {
 }
 </script>
 
-<style src="../../../assets/scss/header/navbar.scss" lang="scss" scoped />
+<style src="../../../assets/scss/header/navbar-medium-mobile.scss" lang="scss" scoped />
 

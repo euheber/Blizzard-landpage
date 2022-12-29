@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     margin: 0 auto;
     padding: 1rem;
+    max-width: 1000px;
   }
   
   nav a {
@@ -34,15 +35,6 @@ header {
     height: 5px;
     position: relative;
     z-index: 99;
-    &::after {
-      position: absolute;
-      content: '';
-      width: 43px;
-      height: 3px;
-      background-color: $primary-blue;
-      left: 1.5rem;
-      bottom: 0px;
-    }
   }
   
   .second-divider {
