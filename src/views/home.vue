@@ -16,8 +16,8 @@
       <a href="" target="_blank">
         <img src="/logo-blizzard.png" alt="Blizzard" id="logo">
       </a>
-      <navbar/>
       <bigScreenNavbarVue />
+      <navbar/>
     </nav>
     <div class="divider">
     </div>

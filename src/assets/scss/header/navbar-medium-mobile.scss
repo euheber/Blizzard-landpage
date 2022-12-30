@@ -4,12 +4,10 @@
     text-align: center;
 }
 
-
 #navigation{
     display: flex;
     gap:  1rem;
     align-items: center;
-    width: 100%;
     flex-direction: row-reverse;
     @media(min-width: 1440px){
         display: none;
@@ -27,13 +25,23 @@
     button {
         padding: .1rem 1rem;
         border-radius: 3.15px;
-
+        cursor: pointer;
         &#create-account {
+            transition: .2s ease;
             border: 1px solid $text-white;
+            &:hover{
+                background-color: $primary-blue;
+                border-color: $primary-blue;
+                color: $text-white;
+            }
         }
 
         &#login {
             background-color: $primary-blue;
+            transition: .2s ease;
+            &:hover{
+                color: $text-white;
+            }
         }
     }
 }
@@ -47,7 +55,7 @@
 
 #openMobileMenu {
     background-color: transparent;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: $primary-gray;
     position: relative;
     z-index: 99;
@@ -85,7 +93,6 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-
     li img {
         width: 30px;
         height: 30px;
@@ -114,6 +121,10 @@
     padding: .5rem;
     margin-top: auto;
     align-self: flex-end;
+}
+
+.rest{
+    margin-bottom: .6rem;
 }
 
 .btnGame {

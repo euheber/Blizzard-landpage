@@ -34,7 +34,7 @@
                     </ul>
                    </Transition>
 
-                    <ul>
+                    <ul class="rest">
                         <li>
                             <p>Loja</p>
                         </li>

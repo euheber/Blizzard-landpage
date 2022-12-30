@@ -1,65 +1,73 @@
 <template>
-    <ul id="navigation">
-        <li @click="handleGames">Jogos <i class="fa-solid fa-chevron-down btnGame"></i></li>
-        <li @click="handleEsports">E-sports <i class="fa-solid fa-chevron-down btnEsport"></i></li>
-        <li>Loja</li>
-        <li>Notícia</li>
-        <li>Suporte</li>
-    </ul>
+    <div class="teste">
+        <ul id="navigation">
+            <li @click="handleGames">Jogos <i class="fa-solid fa-chevron-down btnGame"></i></li>
+            <li @click="handleEsports">E-sports <i class="fa-solid fa-chevron-down btnEsport"></i></li>
+            <li>Loja</li>
+            <li>Notícia</li>
+            <li>Suporte</li>
+        </ul>
 
-    <div id="profile-btns">
-        <button id="create-account">Criar conta</button>
-        <button id="login" @click="renderizar"><i class="fa-regular fa-user"></i> Logar</button>
+        <div id="profile-btns">
+            <button id="create-account">Criar conta</button>
+            <button id="login" @click="renderizar"><i class="fa-regular fa-user"></i> Logar</button>
+        </div>
+        <modalLoginVue ref="meuModalRef" />
+
+        <div v-if="showGames">
+            <gamesListVue />
+        </div>
+
+        <div v-if="showSports">
+            <esportsListVue />
+        </div>
     </div>
-
-    <modalLoginVue ref="meuModalRef"/>
 </template>
 
 <script>
 
 import modalLoginVue from '../Modal/modal-login.vue'
+import esportsListVue from '../Modal/esportsList.vue'
+import gamesListVue from '../Modal/gamesList.vue'
 export default {
-    components: { 
-        modalLoginVue
+    components: {
+        modalLoginVue,
+        esportsListVue,
+        gamesListVue
     },
     name: 'Bigscreen',
     data: () => ({
-        gameIcons: [
-            'icons-banner-hero/game-1.png',
-            'icons-banner-hero/game-2.png',
-            'icons-banner-hero/game-3.png',
-            'icons-banner-hero/game-4.png',
-            'icons-banner-hero/game-5.png',
-            'icons-banner-hero/game-6.png',
-            'icons-banner-hero/game-7.png',
-            'icons-banner-hero/game-8.png',
-            'icons-banner-hero/game-9.png',
-            'icons-banner-hero/game-10.png',
-            'icons-banner-hero/game-11.png',
-            'icons-banner-hero/game-12.png',
-        ],
-        tournamentIcons: [
-            'icons-banner-hero/sport-1.png',
-            'icons-banner-hero/sport-2.png',
-            'icons-banner-hero/sport-3.png',
-            'icons-banner-hero/sport-4.png'
-        ]
+        showGames: false,
+        showSports: false,
     }),
     methods: {
         handleGames() {
             const games = document.querySelector('.btnGame')
             games.classList.toggle('active')
+            this.showGames = !this.showGames
+            if (this.showSports) {
+                this.showSports = !this.showSports
+                const sports = document.querySelector('.btnEsport')
+                sports.classList.toggle('active')
+            }
         },
         handleEsports() {
             const sports = document.querySelector('.btnEsport')
             sports.classList.toggle('active')
+            this.showSports = !this.showSports
         },
-        renderizar(){ 
+        renderizar() {
             this.$refs.meuModalRef.handleM()
         }
     }
 }
 </script>
+
+
+
+
+
+
 
 
 

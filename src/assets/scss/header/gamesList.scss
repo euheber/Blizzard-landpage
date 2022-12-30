@@ -1,0 +1,78 @@
+@import "../variables/colors";
+@import "../variables/buttons";
+@import "../variables/flex";
+
+.gamesBox {
+  z-index: 95;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient($bg-linearGradient);
+  backdrop-filter: blur(6px);
+}
+
+#gamesLi {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  align-self: center;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $primary-gray;
+  }
+  li img {
+    width: 69.4px;
+    height: 69.4px;
+  }
+}
+
+#gamesListFooter {
+  position: absolute;
+  width: 100%;
+  background-color: $lighterBlack;
+  text-align: center;
+  bottom: 0;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+#sportsLi {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-self: center;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $primary-gray;
+  }
+  li img {
+    width: 174px;
+    height: 149px;
+  }
+}
