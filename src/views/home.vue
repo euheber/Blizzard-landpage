@@ -26,19 +26,25 @@
 
   </header>
   <div class="second-divider" :style='`width:${divider}%`'></div>
+
+  <main>
+        <gamesApiVue />
+  </main>
 </template>
 
 <script>
 import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue'
 import navbar from '../components/header/navigation-bar/navbar.vue'
 import bigScreenNavbarVue from '../components/header/navigation-bar/bigScreenNavbar.vue'
+import gamesApiVue from '../components/main/gamesApi.vue'
 export default {
   name: 'Home',
   components: {
     navigation,
     gameSelectionVue,
     navbar,
-    bigScreenNavbarVue
+    bigScreenNavbarVue,
+    gamesApiVue
   },
   data: () => ({
     gameBgPosition: 'diabloIV',

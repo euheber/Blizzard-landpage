@@ -11,8 +11,8 @@
 
 
     <div id="logo-gif">
-      <img :src="logo" alt="teste" class="logo">
-      <img :src="gif" alt="teste" class="gif">
+      <img :src="logo" :alt="alt" class="logo">
+      <img :src="gif" :alt="alt" class="gif">
     </div>
   </div>
 </template>
@@ -27,15 +27,17 @@ export default {
     description: 'O retorno de Lilith traz uma era de escuridão e sofrimento',
     cta: 'Jogue agora',
     logo: 'icons-banner-hero/diabloLogo.svg',
-    gif: 'icons-banner-hero/diabloIV.gif'
+    gif: 'icons-banner-hero/diabloIV.gif',
+    alt: 'Diablo IV'
   }),
   methods: {
-    gotData({ title, bg, description, cta, highlight, divider, logo, gif}) {
+    gotData({ title, bg, description, cta, highlight, divider, logo, gif, alt}) {
       this.title = title
       this.description = description
       this.cta = cta
       this.logo = logo,
       this.gif = gif
+      this.alt = alt
       this.$emit('getBg', { bg, highlight, divider })
     }
   }

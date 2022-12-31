@@ -69,6 +69,9 @@ header {
     @media(min-width:768px){ 
       right: 0;
     }
+    @media(min-width: 1440px){
+      width: 100%;
+    }
   }
   
   .wow {
@@ -78,7 +81,9 @@ header {
     z-index: -1;
     @media(min-width:768px){ 
       right: 0;
-
+    }
+    @media(min-width: 1440px){
+      width: 100%;
     }
   }
   
@@ -90,16 +95,23 @@ header {
     @media(min-width:768px){ 
       right: -200px;
     }
+    @media(min-width: 1440px){
+      width: 100%;
+      right: 0;
+    }
   }
   
   .starcraft {
     position: absolute;
     min-height: 550px;
-    right: -950px;
+    right: -500px;
     z-index: -1;
     @media(min-width:768px){ 
       right: 0;
-
+    }
+    @media(min-width: 1440px){
+      width: 100%;
+      right: 0;
     }
   }
   
@@ -108,4 +120,9 @@ header {
     opacity: 0;
     min-height: 550px;
     right: -250px;
+  }
+
+
+  main { 
+    padding: 1rem;
   }
