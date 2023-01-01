@@ -30,6 +30,10 @@
   <main>
         <gamesApiVue />
   </main>
+  
+  <footer>
+    <footerComponentVue />
+  </footer>
 </template>
 
 <script>
@@ -37,6 +41,7 @@ import gameSelectionVue from '../components/header/hero-banner/gameSelection.vue
 import navbar from '../components/header/navigation-bar/navbar.vue'
 import bigScreenNavbarVue from '../components/header/navigation-bar/bigScreenNavbar.vue'
 import gamesApiVue from '../components/main/gamesApi.vue'
+import footerComponentVue from '../components/footer/footerComponent.vue'
 export default {
   name: 'Home',
   components: {
@@ -44,7 +49,8 @@ export default {
     gameSelectionVue,
     navbar,
     bigScreenNavbarVue,
-    gamesApiVue
+    gamesApiVue,
+    footerComponentVue
   },
   data: () => ({
     gameBgPosition: 'diabloIV',

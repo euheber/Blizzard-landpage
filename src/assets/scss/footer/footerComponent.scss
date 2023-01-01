@@ -1,0 +1,54 @@
+@import "../variables/colors";
+@import "../variables/buttons";
+#footer-content {
+  max-width: 990px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  @media(min-width: 768px){
+    display:flex;
+  }
+}
+
+.footer-text-content {
+    padding-bottom: 1rem;
+    h1{ 
+        color: $text-white;
+        margin-block: 1.5rem;
+        width: 350px;
+    }
+    li {
+        color: $primary-gray;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem
+    }
+    button{ 
+        @include defaultBtn;
+        max-width: 300px;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        color: $text-white;
+        font-size: 14px;
+        gap: .5rem;
+    }
+}
+
+.app-img-box{ 
+    background-image: url(/ilustrations/app.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    max-width: 700px;
+    min-height: 298.2px;
+    display: flex;
+    img{
+        width: 70%;
+        align-self: end;
+        margin-left: 30%;
+    }
+}

@@ -1,20 +1,19 @@
 <template>
     <div id="apiGamesContainer">
         <div id="headerContent">
-            <div>
+            <div id="teste">
                 <span>games</span>
-
                 <h1>Jogos exclusivos</h1>
 
                 <ul>
-                    <li>icons</li>
-                    <li>icons</li>
-                    <li>icons</li>
-                    <li>icons</li>
+                    <li><img src="/icons/blizzard.svg" alt="Blizzard" class="icon"></li>
+                    <li><img src="/icons/wii.svg" alt="Nintendo Wii" class="icon"></li>
+                    <li><img src="/icons/xbox.svg" alt="Xbox" class="icon"></li>
+                    <li><img src="/icons/playstation.svg" alt="Playstation" class="icon"></li>
                 </ul>
             </div>
 
-            <a href="#"> <img src="icons-banner-hero/allGames.svg" alt="Icon1"> Ver todos os jogos</a>
+            <a href="#"> <img src="/icons-banner-hero/allGames.svg" alt="Icon1"> Ver todos os jogos</a>
         </div>
 
         <ul id="gamesList">
@@ -28,7 +27,7 @@
             <li class="all-games-box">
                 <div class="all-games">
                     <img src="/logo-blizzard.png" alt="Blizzard"> <br>
-                    <a href="#"> <img src="icons-banner-hero/allGames.svg" alt="Icon1"> Ver todos os jogos</a>
+                    <a href="#"> <img src="/icons-banner-hero/allGames.svg" alt="Icon1"> Ver todos os jogos</a>
                 </div>
             </li>
         </ul>
@@ -39,7 +38,7 @@
 export default {
     name: 'GameApi',
     data: () => ({
-        games: ''
+        games: '',
     }),
     async created() {
         const response = await fetch('https://api.brchallenges.com/api/blizzard/games')
