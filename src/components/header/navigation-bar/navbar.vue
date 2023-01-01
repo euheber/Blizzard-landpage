@@ -14,7 +14,7 @@
         <Transition name="fadeAnimation">
             <div id="mobileMenu" v-if="handleMobileMenu">
                 <div id="listBox">
-                    <button @click="handleGameList">Jogos<i class="fa-solid fa-chevron-down btnGame"></i></button>
+                    <button @click="handleGameList">Jogos<i class="fa-solid fa-chevron-down btnGameM"></i></button>
                     <Transition name="fadeAnimation">
                         <ul v-if="toggleGamesList" class="gamesList">
                             <li v-for="game in gameIcons" :key="game.indexOf">
@@ -24,7 +24,8 @@
                     </Transition>
 
                     <button @click="handleEsportList">E-sports<i
-                            class="fa-solid fa-chevron-down btnEsport"></i></button>
+                            class="fa-solid fa-chevron-down btnEsportM"></i>
+                        </button>
 
                    <Transition name="fadeAnimation">
                     <ul v-if="toggleEsportList" class="esportsList">
@@ -102,23 +103,23 @@ export default {
     methods: {
         handleGameList() {
             if (this.toggleEsportList) {
-                const btnEsport = document.querySelector('.btnEsport')
+                const btnEsport = document.querySelector('.btnEsportM')
                 btnEsport.classList.toggle('active')
                 this.toggleEsportList = !this.toggleEsportList
             }
             this.toggleGamesList = !this.toggleGamesList
-            const btnGame = document.querySelector('.btnGame')
+            const btnGame = document.querySelector('.btnGameM')
             btnGame.classList.toggle('active')
 
         },
         handleEsportList() {
             if (this.toggleGamesList) {
-                const btnGame = document.querySelector('.btnGame')
+                const btnGame = document.querySelector('.btnGameM')
                 btnGame.classList.toggle('active')
                 this.toggleGamesList = !this.toggleGamesList
             }
             this.toggleEsportList = !this.toggleEsportList
-            const btnEsport = document.querySelector('.btnEsport')
+            const btnEsport = document.querySelector('.btnEsportM')
             btnEsport.classList.toggle('active')
         },
         renderizar(){

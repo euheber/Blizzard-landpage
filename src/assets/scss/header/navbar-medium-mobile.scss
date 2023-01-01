@@ -104,7 +104,6 @@
     display: flex;
     gap: 1rem;
     justify-content: center;
-
     li img {
         width: 40px;
         height: 40px;
@@ -127,9 +126,9 @@
     margin-bottom: .6rem;
 }
 
-.btnGame {
+.btnGameM {
     transition: .2s ease;
-
+    cursor: pointer;
     &.active {
         transform: rotate(3.142rad);
         color: $primary-blue;
@@ -138,8 +137,11 @@
 
 }
 
-.btnEsport {
+.btnEsportM {
+    transition: .2s ease;
+    cursor: pointer;
     &.active {
+        animation-delay: .5s;
         transform: rotate(3.142rad);
         color: $primary-blue;
     }
