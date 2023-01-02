@@ -8,7 +8,7 @@
         </ul>
 
         <div id="gamesListFooter">
-            <img src="/icons-banner-hero/tournamentIcon.svg" alt="Torneios da comunidade">
+            <img src="/icons-banner-hero/tournamentIcon.svg" alt="Torneios da comunidade"> Torneios da comunidade
         </div>
     </div>
 </template>

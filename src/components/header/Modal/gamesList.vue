@@ -8,10 +8,10 @@
     </ul>
       
   <div id="gamesListFooter">
-      <img src="/icons-banner-hero/allGames.svg" alt="Ver todos os jogos">
-      <img src="/icons-banner-hero/blizzardIcon.svg" alt="Aplicativo Battle.net">
-      <img src="/icons-banner-hero/downloadIcon.svg" alt="Downloads">
-      <img src="/icons-banner-hero/comunityIcon.svg" alt="Fóruns dos jogos">
+      <img src="/icons-banner-hero/allGames.svg" alt="Ver todos os jogos"> Ver todos os jogos
+      <img src="/icons-banner-hero/blizzardIcon.svg" alt="Aplicativo Battle.net"> Aplicativos Battle.net
+      <img src="/icons-banner-hero/downloadIcon.svg" alt="Downloads"> Downloads
+      <img src="/icons-banner-hero/comunityIcon.svg" alt="Fóruns dos jogos"> Fóruns dos jogos
     </div>
   </div>
 </template>

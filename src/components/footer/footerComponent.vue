@@ -19,7 +19,7 @@
                 </li>
             </ul>
 
-            <button>baixar para</button> <br>
+            <button v-html="system"></button> <br>
 
             <a><img src="/icons/cellphone.svg" alt="Icone: celular"> Também disponível como aplicativo móvel</a>
        </div>
@@ -35,6 +35,15 @@ export default {
     data: () => ({
         nome: 'heber'
     }),
+    computed: { 
+        system(){ 
+            if(navigator.platform == 'Win32' || navigator.platform == 'Win16'){ 
+                return `<i class="fa-brands fa-windows">` + `</i>` + ' Baixar para Windows'
+            } else { 
+                return `<i class="fa-brands fa-apple"></i>Baixar para MacOS`
+            }
+        }
+    }
 }
 </script>
 

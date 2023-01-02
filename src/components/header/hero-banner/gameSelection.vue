@@ -12,7 +12,7 @@
 
     <div id="logo-gif">
       <img :src="logo" :alt="alt" class="logo">
-      <img :src="gif" :alt="alt" class="gif">
+      <video :src="gif" class="gif"  @mouseover="play" @mouseleave="pause"></video>
     </div>
   </div>
 </template>
@@ -27,8 +27,8 @@ export default {
     description: 'O retorno de Lilith traz uma era de escuridão e sofrimento',
     cta: 'Jogue agora',
     logo: 'icons-banner-hero/diabloLogo.svg',
-    gif: 'icons-banner-hero/diabloIV.gif',
-    alt: 'Diablo IV'
+    gif: 'icons-banner-hero/diabloIV.mp4',
+    alt: 'Diablo IV',
   }),
   methods: {
     gotData({ title, bg, description, cta, highlight, divider, logo, gif, alt}) {
@@ -39,6 +39,14 @@ export default {
       this.gif = gif
       this.alt = alt
       this.$emit('getBg', { bg, highlight, divider })
+    },
+    play(){ 
+      const video = document.querySelector('.gif')
+      video.play()
+    },
+    pause(){
+      const video = document.querySelector('.gif')
+      video.pause()
     }
   }
 }
